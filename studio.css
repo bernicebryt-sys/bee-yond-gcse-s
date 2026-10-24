@@ -1,0 +1,77 @@
+.creative-workspace, .studio-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(230px, .65fr); gap: 12px; align-items: start; }
++.creative-editor, .creative-brief, .sequencer-panel, .lyrics-panel, .voice-range-panel, .drama-camera-panel, .drama-review-panel, .helper-panel { min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
++.creative-toolbar, .photo-adjustments, .sequencer-actions, .drama-record-actions { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; padding-bottom: 10px; }
++.creative-toolbar label, .photo-adjustments label { display: grid; gap: 3px; color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
++.creative-toolbar input[type="color"] { width: 38px; height: 30px; padding: 2px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); }
++.creative-toolbar input[type="range"], .photo-adjustments input[type="range"] { width: 100px; accent-color: var(--accent); }
++#digital-canvas { display: block; width: 100%; height: auto; aspect-ratio: 5 / 3; border: 1px solid var(--line); border-radius: 3px; background: #fffefa; cursor: crosshair; touch-action: none; }
++.save-work-row { display: flex; gap: 8px; margin-top: 10px; }
++.save-work-row input, .creative-editor > textarea, .lyrics-panel textarea, .drama-review-panel textarea, .helper-input-row input { min-width: 0; flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: 11px; }
++.creative-brief h2, .lyrics-panel > h2, .voice-range-panel h2, .drama-review-panel h2 { margin: 5px 0 7px; font-family: var(--font-display); font-size: 20px; font-weight: 600; }
++.creative-brief p:not(.eyebrow), .voice-range-panel p:not(.eyebrow) { color: var(--muted); font-size: 11px; }
++.photo-upload-row { display: flex; gap: 10px; align-items: center; margin-bottom: 9px; color: var(--muted); font-size: 10px; }
++.photo-canvas-wrap { position: relative; display: grid; min-height: 250px; place-items: center; overflow: hidden; border: 1px solid var(--line); background: #18211d; }
++#photo-canvas { display: block; width: 100%; height: auto; max-height: 470px; object-fit: contain; }
++.photo-empty { position: absolute; color: #d9e2da; font-size: 12px; pointer-events: none; }
++.photo-adjustments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 10px; }
++.photo-adjustments input { width: 100% !important; }
++.analysis-label { display: block; margin: 10px 0 5px; color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
++.creative-editor > textarea, .lyrics-panel textarea, .drama-review-panel textarea { width: 100%; resize: vertical; line-height: 1.6; }
++.creative-portfolio { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
++.portfolio-item { display: grid; grid-template-columns: minmax(0, 1fr) 30px; gap: 8px; align-items: start; min-width: 0; padding: 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--panel); }
++.portfolio-item img { grid-column: 1 / -1; width: 100%; max-height: 220px; object-fit: contain; background: var(--bg); }
++.portfolio-item strong, .portfolio-item span { display: block; }
++.portfolio-item strong { font-size: 11px; }.portfolio-item span { color: var(--muted); font-size: 9px; }.portfolio-item p { margin: 5px 0 0; color: var(--muted); font-size: 10px; }
++.sequencer-panel { overflow: hidden; }.studio-toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 15px; }
++.studio-toolbar label { display: grid; gap: 4px; color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
++.studio-toolbar select { min-height: 33px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 10px; }
++.studio-toolbar input[type="range"] { width: 100%; accent-color: var(--accent); }
++.studio-toolbar strong { color: var(--ink); }
++.sequencer-grid { display: grid; gap: 4px; min-width: 570px; }
++.sequencer-panel { overflow-x: auto; }
++.sequencer-row { display: grid; grid-template-columns: 34px repeat(16, minmax(22px, 1fr)); gap: 4px; align-items: center; }
++.sequencer-row > span { color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
++.sequence-step { aspect-ratio: 1; min-width: 0; padding: 0; border: 1px solid var(--line); border-radius: 3px; background: var(--bg); cursor: pointer; }
++.sequence-step.beat-start { border-left: 2px solid var(--muted); }
++.sequence-step.active { border-color: var(--accent); background: var(--accent); }
++.sequence-step.playing { box-shadow: 0 0 0 2px #e4ac52; }
++.sequencer-actions { padding-top: 12px; }.studio-note, #music-play-status { margin: 4px 0 0; color: var(--muted); font-size: 9px; }
++.lyrics-panel { display: grid; gap: 10px; }.lyrics-panel input { width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
++.voice-range-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr); gap: 18px; margin-top: 12px; }
++.voice-safety { padding-left: 9px; border-left: 2px solid #d5a85a; }
++.voice-meter { display: grid; justify-items: center; align-content: center; gap: 7px; padding: 14px; border-radius: 4px; background: var(--accent-pale); text-align: center; }
++.voice-meter > strong { color: var(--accent-dark); font-family: var(--font-display); font-size: 38px; }
++.voice-meter > span { color: var(--muted); font-size: 9px; }
++.voice-meter #voice-range-result { color: var(--ink); font-size: 10px; }
++.voice-meter #voice-status { min-height: 15px; }
++.voice-meter button:disabled { opacity: .45; }
++.drama-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(270px, .9fr); gap: 12px; }
++.drama-camera-panel video { display: block; width: 100%; max-height: 460px; min-height: 220px; background: #17201c; object-fit: contain; }
++#drama-preview { transform: scaleX(-1); }
++#drama-playback { margin-top: 10px; transform: none; }
++.drama-record-status { min-height: 20px; padding: 6px 0; color: var(--muted); font-size: 9px; }
++.drama-record-actions { padding: 5px 0 0; }
++.drama-checks { display: grid; gap: 8px; margin: 10px 0; }
++.drama-checks label { display: flex; gap: 7px; align-items: center; color: var(--ink); font-size: 10px; }
++.drama-checks input { accent-color: var(--accent); }
++.drama-review-panel > select { width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
++.next-target { padding: 10px; margin-top: 10px; border-left: 3px solid var(--accent); background: var(--accent-pale); color: var(--accent-dark); font-size: 10px; }
++.helper-panel { max-width: 780px; }.helper-panel > label { color: var(--muted); font-family: var(--font-mono); font-size: 9px; }
++.helper-input-row { display: flex; gap: 8px; margin: 7px 0 15px; }
++.helper-answer { display: grid; gap: 8px; }.helper-answer > p { color: var(--muted); font-size: 11px; }
++.helper-result { padding: 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); }
++.helper-result .eyebrow { margin-bottom: 6px; color: var(--accent-dark); }.helper-result p { margin: 0 0 7px; font-size: 11px; }
++.helper-sites { display: flex; flex-wrap: wrap; gap: 8px 14px; padding-top: 13px; margin-top: 14px; border-top: 1px solid var(--line); }
++.helper-sites .eyebrow { width: 100%; margin: 0; }.helper-sites a { color: var(--accent-dark); font-size: 10px; font-weight: 600; }
++.helper-limit { color: var(--muted); font-size: 9px; }
++.topic-recall { display: grid; gap: 4px; margin-top: 5px; padding: 7px; border-radius: 3px; background: var(--bg); font-size: 10px; }
++.topic-recall summary { cursor: pointer; color: var(--accent-dark); font-weight: 600; }.topic-recall p { margin: 2px 0; color: var(--muted); font-size: 10px; }
++.theory-response { width: 100%; min-height: 110px; padding: 9px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); font-size: 12px; line-height: 1.6; resize: vertical; }
++.theory-submit-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 0; color: var(--muted); font-size: 9px; }
++.mark-value { color: var(--accent-dark); font-family: var(--font-mono); font-size: 10px; }
++.user-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
++.badge-chip { display: inline-flex; align-items: center; gap: 3px; padding: 2px 5px; border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--line)); border-radius: 10px; background: var(--accent-pale); color: var(--accent-dark); font-size: 8px; white-space: nowrap; }
++.leader-name { min-width: 0; }.leader-name > strong { display: block; }
++.friend-streak { display: grid; gap: 3px; color: var(--muted); font-size: 8px; }.friend-streak input { width: 55px; padding: 4px; border: 1px solid var(--line); border-radius: 3px; background: var(--bg); color: var(--ink); font-size: 10px; }
++@media (max-width: 800px) { .creative-workspace, .studio-grid, .drama-layout, .voice-range-panel { grid-template-columns: 1fr; }.sequencer-panel { overflow-x: auto; }.creative-portfolio { grid-template-columns: 1fr; }.photo-adjustments { gap: 6px; }.music-portfolio-item { grid-template-columns: 1fr auto; }.music-portfolio-item > button[data-load-song] { justify-self: start; }.music-portfolio-item > button[data-delete-music] { grid-column: 2; grid-row: 1; }.drama-record-actions { align-items: stretch; }.theory-submit-row { align-items: flex-start; flex-direction: column; }.friend-row { grid-template-columns: 32px minmax(60px,1fr) auto; }.friend-streak, .friend-minutes { font-size: 7px; } }
+*** End Patch
